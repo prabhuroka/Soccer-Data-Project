@@ -1,0 +1,11 @@
+soccer_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: password
+      port: 5432
+      dbname: soccer_db
+      schema: analytics
