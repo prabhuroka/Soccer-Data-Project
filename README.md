@@ -84,6 +84,11 @@ pip install pandas sqlalchemy psycopg2-binary apache-airflow dbt-postgres
 # Create PostgreSQL database
 psql -U postgres -c "CREATE DATABASE soccer_db;"
 
+OR (Manually from PostGres)
+CREATE DATABASE soccer_db;
+CREATE USER postgres WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE soccer_db TO postgres;
+
 # Run ETL pipeline
 python etl/extract_load.py
 
